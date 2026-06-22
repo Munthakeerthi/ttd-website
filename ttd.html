@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tirumala Tirupati Devasthanams</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#f5f5f5;
+}
+
+header{
+    background:#8B0000;
+    color:white;
+    padding:15px 50px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+}
+
+nav ul li{
+    margin-left:20px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.hero{
+    height:700px;
+    background:url('https://t3.ftcdn.net/jpg/16/72/54/58/360_F_1672545804_EsX0QX04MWEFbPmQTCNrixOsy00pt3Ve.jpg')
+    center/cover no-repeat;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+}
+
+.hero-content{
+    background:rgba(0,0,0,0.6);
+    padding:30px;
+    border-radius:10px;
+}
+
+.hero h1{
+    font-size:45px;
+}
+
+.hero p{
+    margin-top:10px;
+    font-size:18px;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:12px 25px;
+    background:gold;
+    color:black;
+    text-decoration:none;
+    border-radius:5px;
+    font-weight:bold;
+}
+
+.section{
+    padding:50px;
+    text-align:center;
+}
+
+.section h2{
+    margin-bottom:30px;
+    color:#8B0000;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:white;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+.card h3{
+    color:#8B0000;
+    margin-bottom:10px;
+}
+
+.events table{
+    width:100%;
+    background:white;
+    border-collapse:collapse;
+}
+
+.events th,
+.events td{
+    border:1px solid #ddd;
+    padding:12px;
+}
+
+.events th{
+    background:#8B0000;
+    color:white;
+}
+
+.donation{
+    background:#fff8dc;
+    padding:50px;
+    text-align:center;
+}
+
+footer{
+    background:#333;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">TTD</div>
+
+    <nav>
+        <ul>
+            
+            <li><a href="ttd.html">Home</a></li>
+            <li><a href="darshan.html">Darshan</a></li>
+            <li><a href="accomodation.html">Accommodation</a></li>
+            <li><a href="donation.html">Donations</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="register.html">Register</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>Welcome to Tirumala Tirupati Devasthanams</h1>
+        <p>Experience Divine Blessings of Lord Venkateswara</p>
+
+        <a href="darshan.html" class="btn">Book Darshan</a>
+    </div>
+</section>
+
+<section class="section">
+    <h2>Our Services</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Darshan Booking</h3>
+            <p>Book your darshan tickets online.</p>
+        </div>
+
+        <div class="card">
+            <h3>Accommodation</h3>
+            <p>Reserve rooms for your Tirumala visit.</p>
+        </div>
+
+        <div class="card">
+            <h3>Donations</h3>
+            <p>Contribute towards temple development.</p>
+        </div>
+
+        <div class="card">
+            <h3>Prasadam</h3>
+            <p>Book laddus and prasadam online.</p>
+        </div>
+
+    </div>
+</section>
+
+<section class="section">
+    <h2>Temple Information</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Sri Venkateswara Temple</h3>
+            <p>Main shrine of Lord Balaji.</p>
+        </div>
+
+        <div class="card">
+            <h3>Padmavathi Temple</h3>
+            <p>Dedicated to Goddess Padmavathi.</p>
+        </div>
+
+        <div class="card">
+            <h3>Varaha Swamy Temple</h3>
+            <p>Ancient temple near Swami Pushkarini.</p>
+        </div>
+
+    </div>
+</section>
+
+<section class="section events">
+    <h2>Upcoming Events</h2>
+
+    <table>
+        <tr>
+            <th>Event</th>
+            <th>Date</th>
+        </tr>
+
+        <tr>
+            <td>Brahmotsavam</td>
+            <td>10 Sep 2026</td>
+        </tr>
+
+        <tr>
+            <td>Vaikunta Ekadasi</td>
+            <td>25 Dec 2026</td>
+        </tr>
+
+        <tr>
+            <td>Kalyanotsavam</td>
+            <td>Daily</td>
+        </tr>
+
+    </table>
+</section>
+
+<section class="donation">
+    <h2>Support Temple Activities</h2>
+    <p>Your contribution helps millions of devotees.</p>
+    <br>
+    <a href="#" class="btn">Donate Now</a>
+</section>
+
+<section class="section">
+    <h2>Contact Us</h2>
+
+    <p>
+        Tirumala Tirupati Devasthanams<br>
+        Tirumala, Andhra Pradesh<br>
+        Phone: +91 XXXXX XXXXX<br>
+        Email: info@ttd.com
+    </p>
+</section>
+
+<footer>
+    <p>© 2026 Tirumala Tirupati Devasthanams. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
