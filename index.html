@@ -140,6 +140,141 @@ footer{
     text-align:center;
     padding:20px;
 }
+
+/* Announcement */
+
+.announcement{
+background:linear-gradient(to right,#8B0000,#d4af37);
+color:white;
+padding:12px;
+font-weight:bold;
+}
+
+/* Statistics */
+.stats{
+padding:60px;
+text-align:center;
+background:linear-gradient(135deg,#fff7e6,#ffe4b5);
+}
+
+.stats-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+margin-top:30px;
+}
+
+.stat-box{
+background:white;
+padding:30px;
+border-radius:15px;
+box-shadow:0 10px 20px rgba(0,0,0,.15);
+transition:.4s;
+animation:fadeUp 1s ease;
+}
+
+.stat-box:hover{
+transform:translateY(-12px) scale(1.05);
+}
+
+.stat-box h3{
+color:#8B0000;
+font-size:35px;
+}
+
+/* Festival */
+.festival{
+transition:.5s;
+}
+
+.festival:hover{
+transform:rotate(-3deg) scale(1.05);
+background:linear-gradient(135deg,#fff7e6,#ffe4b5);
+}
+
+/* FAQ */
+details{
+width:70%;
+margin:auto;
+background:white;
+padding:15px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+text-align:left;
+}
+
+summary{
+font-weight:bold;
+cursor:pointer;
+color:#8B0000;
+}
+
+/* Scroll Button */
+#topBtn{
+display:none;
+position:fixed;
+bottom:30px;
+right:30px;
+background:#8B0000;
+color:white;
+border:none;
+padding:15px;
+font-size:18px;
+border-radius:50%;
+cursor:pointer;
+transition:.3s;
+}
+
+#topBtn:hover{
+background:gold;
+color:black;
+transform:scale(1.1);
+}
+
+/* Hero Animation */
+.hero-content{
+animation:zoomIn 1.5s ease;
+}
+
+/* Card Hover */
+.card{
+transition:.4s;
+}
+.card:hover{
+transform:translateY(-10px);
+}
+
+/* Button */
+.btn{
+background:linear-gradient(to right,gold,#ffcf33);
+transition:.4s;
+}
+
+.btn:hover{
+transform:scale(1.08);
+}
+
+/* Animations */
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(40px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+@keyframes zoomIn{
+from{
+opacity:0;
+transform:scale(.8);
+}
+to{
+opacity:1;
+transform:scale(1);
+}
+}
 </style>
 </head>
 
@@ -160,6 +295,16 @@ footer{
             <li><a href="register.html">Register</a></li>
         </ul>
     </nav>
+
+    <aside class="announcement">
+    <marquee behavior="scroll" direction="left">
+        🛕 Welcome to Tirumala Tirupati Devasthanams |
+        Online Darshan Booking Available |
+        Special Entry Darshan Open |
+        Srivari Sevas Available |
+        Govinda! Govinda!
+    </marquee>
+</aside>
 </header>
 
 <section class="hero">
@@ -198,6 +343,35 @@ footer{
 
     </div>
 </section>
+<section class="stats">
+
+<h2>Temple Statistics</h2>
+
+<div class="stats-container">
+
+<div class="stat-box">
+<h3>80,000+</h3>
+<p>Daily Devotees</p>
+</div>
+
+<div class="stat-box">
+<h3>300+</h3>
+<p>Years of Heritage</p>
+</div>
+
+<div class="stat-box">
+<h3>150+</h3>
+<p>Daily Sevas</p>
+</div>
+
+<div class="stat-box">
+<h3>24×7</h3>
+<p>Pilgrim Support</p>
+</div>
+
+</div>
+
+</section>
 
 <section class="section">
     <h2>Temple Information</h2>
@@ -220,6 +394,30 @@ footer{
         </div>
 
     </div>
+</section>
+<section class="section">
+
+<h2>Major Festivals</h2>
+
+<div class="cards">
+
+<div class="card festival">
+<h3>Brahmotsavam</h3>
+<p>Grand annual festival celebrated with divine processions.</p>
+</div>
+
+<div class="card festival">
+<h3>Vaikunta Ekadasi</h3>
+<p>Special darshan through Vaikunta Dwaram.</p>
+</div>
+
+<div class="card festival">
+<h3>Rathasapthami</h3>
+<p>Seven Vahana Sevas performed in one day.</p>
+</div>
+
+</div>
+
 </section>
 
 <section class="section events">
@@ -255,6 +453,30 @@ footer{
     <br>
     <a href="donation.html" class="btn">Donate Now</a>
 </section>
+<section class="section">
+
+<h2>Frequently Asked Questions</h2>
+
+<details>
+<summary>How can I book Darshan?</summary>
+<p>Use the Darshan Booking page to reserve your slot.</p>
+</details>
+
+<br>
+
+<details>
+<summary>Can I book accommodation online?</summary>
+<p>Yes. Accommodation booking is available online.</p>
+</details>
+
+<br>
+
+<details>
+<summary>How can I donate?</summary>
+<p>Visit the Donations page and select your preferred donation amount.</p>
+</details>
+
+</section>
 
 <section class="section">
     <h2>Contact Us</h2>
@@ -270,6 +492,31 @@ footer{
 <footer>
     <p>© 2026 Tirumala Tirupati Devasthanams. All Rights Reserved.</p>
 </footer>
+
+<button id="topBtn" onclick="topFunction()">↑</button>
+
+<script>
+
+let btn=document.getElementById("topBtn");
+
+window.onscroll=function(){
+
+if(document.body.scrollTop>200 || document.documentElement.scrollTop>200)
+btn.style.display="block";
+
+else
+btn.style.display="none";
+
+};
+
+function topFunction(){
+
+document.body.scrollTop=0;
+document.documentElement.scrollTop=0;
+
+}
+
+</script>
 
 </body>
 </html>
